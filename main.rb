@@ -5,6 +5,7 @@ require './lib/helpers'
 require './lib/game'
 require './lib/entity'
 require './lib/bullet'
+require './lib/bullet_emitter'
 require './lib/player_controller'
 require './lib/ship'
 

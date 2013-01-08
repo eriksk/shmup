@@ -36,7 +36,7 @@ module Shmup
 		end
 
 		def draw
-			@image.draw_rot(@position.x, @position.y, 0, @rotation, @origin.x, @origin.y, @scale, @scale)
+			@image.draw_rot(@position.x, @position.y, 0, @rotation.to_radians, @origin.x, @origin.y, @scale, @scale)
 		end
 	end
 end
