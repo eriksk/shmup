@@ -12,8 +12,27 @@ module Shmup
 			@scale = 1.0
 		end
 
+		def set_position x, y
+			@position.x, @position.y = x, y
+			self
+		end
+
+		def set_velocity x, y
+			@velocity.x, @velocity.y = x, y
+			self
+		end
+
+		def set_scale scale
+			@scale = scale
+			self			
+		end
+
+		def set_rotation rotation
+			@rotation = rotation
+			self
+		end
+
 		def update dt
-			
 		end
 
 		def draw

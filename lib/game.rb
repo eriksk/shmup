@@ -5,7 +5,8 @@ module Shmup
 			@window = window
 
 			@bullets = []
-			@bullets.push Bullet.new Shmup.load_image(window, 'bullet_blue'), 5000
+			@bullets.push Bullet.new(Shmup.load_image(window, 'bullet_blue'), 5000).
+				set_position(100, 100)
 		end
 
 		def update dt
