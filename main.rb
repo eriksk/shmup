@@ -1,6 +1,10 @@
 require 'gosu'
 require './conf'
+require './lib/vec2'
+require './lib/helpers'
 require './lib/game'
+require './lib/entity'
+require './lib/bullet'
 
 module Shmup
 	class GameWindow < Gosu::Window
@@ -9,6 +13,15 @@ module Shmup
 			self.caption = TITLE
 
 			@game = Game.new(self)
+		end
+		
+		def button_down(id)
+			case id
+				when Gosu::KbEscape
+					if DEBUG
+						self.close
+					end
+			end
 		end
 		
 		def update

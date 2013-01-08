@@ -3,4 +3,6 @@ module Shmup
 	HEIGHT = 720
 	FULLSCREEN = false
 	TITLE = "Ruby Shmup"
+	CONTENT_ROOT = "content"
+	DEBUG = true
 end
