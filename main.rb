@@ -5,6 +5,8 @@ require './lib/helpers'
 require './lib/game'
 require './lib/entity'
 require './lib/bullet'
+require './lib/player_controller'
+require './lib/ship'
 
 module Shmup
 	class GameWindow < Gosu::Window
@@ -23,13 +25,19 @@ module Shmup
 					end
 			end
 		end
-		
+
 		def update
 			dt = 16.0
 			@game.update dt
 		end
 		
 		def draw
+			draw_quad(
+				0, 0, BACKGROUND_COLOR,
+				WIDTH, 0, BACKGROUND_COLOR,
+				WIDTH, HEIGHT, BACKGROUND_COLOR,
+				0, HEIGHT, BACKGROUND_COLOR
+			)
 			@game.draw
 		end
 	end

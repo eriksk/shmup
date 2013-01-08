@@ -12,6 +12,8 @@ module Shmup
 
 		def update dt
 			@duration -= dt
+			@position.x += @velocity.x * dt
+			@position.y += @velocity.y * dt
 		end		
 	end
 end
