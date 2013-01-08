@@ -30,9 +30,11 @@ module Shmup
 		
 		def update owner, bullets, dt
 			if @current_wait < @wait
+				@current_wait += dt
+			else
 				if @current_repeat < @repeat
 					@current_interval += dt
-					if @current_interval < @interval
+					if @current_interval > @interval
 						@current_interval = 0.0
 						@count.times{ |i|
 							fire(i, bullets, owner.position.x, owner.position.y)
