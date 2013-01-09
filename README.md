@@ -1,5 +1,7 @@
 # Shmup
 
+This is a classic intense Shoot 'Em Up made in Ruby. It is a remake of the first game that I ever made for the Xbox 360 using XNA Game Studio. The purpose of this game is to create a new and better version of a game that I put a lot of hours into.
+
 ## Installation
 
 	gem install bundler
