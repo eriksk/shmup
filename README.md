@@ -28,6 +28,7 @@ This is a classic intense Shoot 'Em Up made in Ruby. It is a remake of the first
 
 ## Working on
 * audio
+* time offset multiplier for "enter on" for multiple enemies in a row
 
 ## Done
 * bullets
