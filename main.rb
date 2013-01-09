@@ -16,7 +16,6 @@ require './lib/ship_path'
 require './lib/stage'
 require './lib/stage_loader'
 
-=begin
 module Shmup
 	class GameWindow < Gosu::Window
 		def initialize
@@ -54,5 +53,3 @@ end
 
 game_window = Shmup::GameWindow.new
 game_window.show
-=end
-Shmup::StageLoader.load(nil, "stage1")

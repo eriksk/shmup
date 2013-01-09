@@ -9,8 +9,8 @@ module Shmup
 			@out = out
 			@duration = duration
 			@stay = stay
-			@stage = :transition_in
-			@position = Vec2.new
+			@state = :transition_in
+			@position = Vec2.new(@start.x, @start.y)
 			@current = 0.0
 		end
 
@@ -19,26 +19,32 @@ module Shmup
 		end
 
 		def done?
-			@stage == :done
+			@state == :done
 		end
 
 		def update dt
 			@current += dt
-			case @stage
+			case @state
 				when :transition_in
+					@position.x = Shmup.qlerp(@start.x, @stop.x, @current / @duration)
+					@position.y = Shmup.qlerp(@start.y, @stop.y, @current / @duration)
 					if @current > @duration
 						@current = 0.0
-						@stage = :staying
+						@state = :staying
 					end
 				when :staying
 					if @current > @stay
 						@current = 0.0
-						@stage = :transition_out
+						@state = :transition_out
 					end
 				when :transition_out				
-					if @current > @stay
-						@stage = :done
+					@position.x = Shmup.qlerp(@stop.x, @out.x, @current / @duration)
+					@position.y = Shmup.qlerp(@stop.y, @out.y, @current / @duration)
+					if @current > @duration
+						@state = :done
 					end
+				when :done
+					# do nothing
 			end
 		end		
 	end

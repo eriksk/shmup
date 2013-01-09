@@ -1,8 +1,11 @@
 module Shmup
 	class Stage
 
+		attr_accessor :enemies
+
 		def initialize window, name
 			@window = window
+			@time = 0.0
 
 			@bullets = []
 			@bullets.push Bullet.new(Shmup.load_image(window, 'bullet_yellow'), 5000)
@@ -23,7 +26,6 @@ module Shmup
 				.set_position(WIDTH / 2.0, HEIGHT - 128)
 
 			@enemies = []
-			@time = 0.0
 		end
 
 		def fast_forward_to time_in_milliseconds
@@ -49,7 +51,7 @@ module Shmup
 				emitter.update @player, @bullets, dt
 			end
 			@enemies.each do |e|
-				e.update dt, time
+				e.update dt, @time
 			end
 		end
 
