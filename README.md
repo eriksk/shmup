@@ -24,6 +24,7 @@ This is a classic intense Shoot 'Em Up made in Ruby. It is a remake of the first
 * score
 * support for bosses
 * different enemy types
+* resource pooling
 
 ## Working on
 * audio
