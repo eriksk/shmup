@@ -14,6 +14,16 @@ This is a classic intense Shoot 'Em Up made in Ruby. It is a remake of the first
 ## Todo
 * reload stage, set timestamp and fast forward for quick editing of json stages
 * stage settings, scrolling background etc.
+* stage select scene
+* title scene
+* scene management
+* player weapons
+* collision bullets/enemies
+* collision bullets/player
+* particles, explosions
+* score
+* support for bosses
+* different enemy types
 
 ## Working on
 * audio
