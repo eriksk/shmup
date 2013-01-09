@@ -80,9 +80,9 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
      inkscape:cx="224.25448"
-     inkscape:cy="537.4005"
+     inkscape:cy="534.00764"
      inkscape:document-units="px"
-     inkscape:current-layer="g3847"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1749"
      inkscape:window-height="1004"
@@ -109,7 +109,7 @@
      id="layer1">
     <g
        id="g3801"
-       transform="matrix(0.87329438,0,0,0.87329438,-35.273629,31.5674)">
+       transform="matrix(0.43664719,0,0,0.43664719,79.229635,254.042)">
       <path
          sodipodi:type="arc"
          style="fill:#000000;fill-opacity:1;stroke:none"
@@ -142,7 +142,7 @@
          transform="matrix(0.7798077,0,0,0.7798077,57.752142,106.12331)" />
     </g>
     <g
-       transform="matrix(0.87329438,0,0,0.87329438,1.723208,31.441131)"
+       transform="matrix(0.43664719,0,0,0.43664719,116.22647,253.91573)"
        id="g3827">
       <path
          transform="matrix(0.98653844,0,0,0.98653844,-1.3137944,4.0415723)"
@@ -176,8 +176,11 @@
          sodipodi:type="arc" />
     </g>
     <g
-       transform="matrix(0.87329438,0,0,0.87329438,-34.894822,69.826928)"
-       id="g3837">
+       transform="matrix(0.43664719,0,0,0.43664719,79.608442,292.30153)"
+       id="g3837"
+       inkscape:export-filename="/Users/erikskoglund/Documents/ruby/shmup/content/gfx/bullet_blue.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          transform="matrix(0.98653844,0,0,0.98653844,-1.3137944,4.0415723)"
          d="m 304.28572,493.79074 c 0,10.25672 -8.31471,18.57143 -18.57143,18.57143 -10.25671,0 -18.57142,-8.31471 -18.57142,-18.57143 0,-10.25672 8.31471,-18.57143 18.57142,-18.57143 10.25672,0 18.57143,8.31471 18.57143,18.57143 z"
@@ -210,7 +213,7 @@
          sodipodi:type="arc" />
     </g>
     <g
-       transform="matrix(0.87329438,0,0,0.87329438,1.8494771,71.215887)"
+       transform="matrix(0.43664719,0,0,0.43664719,116.35274,293.69049)"
        id="g3847">
       <path
          transform="matrix(0.98653844,0,0,0.98653844,-1.3137944,4.0415723)"

@@ -7,17 +7,20 @@ module Shmup
 
 		def update ship, dt
 			if @window.button_down? Gosu::KbLeft
-				ship.position.x -= ship.speed * dt
+				ship.velocity.x -= ship.speed * dt
 			end
 			if @window.button_down? Gosu::KbRight
-				ship.position.x += ship.speed * dt
+				ship.velocity.x += ship.speed * dt
 			end
 			if @window.button_down? Gosu::KbUp
-				ship.position.y -= ship.speed * dt
+				ship.velocity.y -= ship.speed * dt
 			end
 			if @window.button_down? Gosu::KbDown
-				ship.position.y += ship.speed * dt
+				ship.velocity.y += ship.speed * dt
 			end
+			friction = 0.7
+			ship.velocity.x *= friction
+			ship.velocity.y *= friction
 		end		
 	end
 end

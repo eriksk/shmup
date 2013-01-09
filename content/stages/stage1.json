@@ -1,0 +1,25 @@
+{
+	"name" : "Stage 1",
+	"enemies" : [
+		{
+			"enter_on" : 2000,
+			"type" : "mini",
+			"path" : {
+				"start" : {
+					"x" : 0,
+					"y" : 0,
+				},
+				"stop" : {
+					"x" : 100,
+					"y" : 100
+				},
+				"out" : {
+					"x" : -100,
+					"y" : 100
+				},
+				"duration" : 5,
+				"stay" : 2
+			}
+		}
+	]
+}
