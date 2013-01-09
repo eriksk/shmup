@@ -12,9 +12,9 @@
 ## Todo
 * reload stage, set timestamp and fast forward for quick editing of json stages
 * stage settings, scrolling background etc.
-* audio
 
 ## Working on
+* audio
 
 ## Done
 * bullets

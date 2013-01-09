@@ -3,6 +3,14 @@ module Shmup
 		Gosu::Image.new(window, "#{CONTENT_ROOT}/gfx/#{name}.png")
 	end
 
+	def self.load_sample(window, name)
+		Sample.new(window, "#{CONTENT_ROOT}/audio/#{name}.wav")
+	end
+
+	def self.load_song(window, name)
+		
+	end
+
 	def self.to_degrees radiens
 		radiens * 180 / Math::PI
 	end
