@@ -2,11 +2,13 @@
 	"name" : "Stage 1",
 	"enemies" : [{
 			"enter_on" : 500,
+			"count" : 5,
+			"start_offset" : 300,
 			"type" : "mini",
 			"path" : {
 				"start" : {
 					"x" : 0,
-					"y" : 0
+					"y" : -100
 				},
 				"stop" : {
 					"x" : 200,
@@ -18,7 +20,20 @@
 				},
 				"duration" : 3,
 				"stay" : 0.1
-			}
+			},
+			"emitters" : [
+				{
+					
+				:count => 1,
+				:interval => 200, 
+				:angle => 0.0,
+				:angle_diff => 0.0,
+				:wait => 500.0,
+				:repeat => 1,
+				:speed => 0.1,
+				:angle_add => 0.0
+				}
+			]
 		}
 	]
 }

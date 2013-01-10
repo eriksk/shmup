@@ -1,7 +1,7 @@
 module Shmup
 	class BulletEmitter
 
-		attr_accessor :count, :interval, :angle, :angle_diff, :wait, :repeat
+		attr_accessor :count, :interval, :angle, :angle_diff, :wait, :repeat, :angle_add
 
 		def initialize window, opts = {}
 			opts = {

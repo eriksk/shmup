@@ -7,6 +7,9 @@ module Shmup
 			@speed = speed
 			@emitters = bullet_emitters
 			@path = path
+			# always start outside the screen
+			@position.x = -1000
+			@position.y = -1000
 		end
 
 		def alive?
