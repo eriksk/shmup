@@ -21,17 +21,15 @@
 				"duration" : 3,
 				"stay" : 0.1
 			},
-			"emitters" : [
-				{
-					
-				:count => 1,
-				:interval => 200, 
-				:angle => 0.0,
-				:angle_diff => 0.0,
-				:wait => 500.0,
-				:repeat => 1,
-				:speed => 0.1,
-				:angle_add => 0.0
+			"emitters" : [{
+					"count" : 1,
+					"interval" : 200,
+					"angle" : 0,
+					"angle_diff" : 0,
+					"wait" : 500,
+					"repeat" : 1,
+					"speed" : 0.1,
+					"angle_add" : 0.0
 				}
 			]
 		}

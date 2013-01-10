@@ -34,7 +34,19 @@ module Shmup
 					duration = e['path']['duration']
 					stay = e['path']['stay']
 					path = ShipPath.new(start, stop, out, duration * 1000.0, stay * 1000.0)
-					emitters = [] # TODO: load emitters
+					emitters = []
+					e['emitters'].each do |emitter|
+						emitters << BulletEmitter.new(window, {
+							:count => emitter['count'],
+							:interval => emitter['interval'], 
+							:angle => emitter['angle'],
+							:angle_diff => emitter['angle_diff'],
+							:wait => emitter['wait'],
+							:repeat => emitter['repeat'],
+							:speed => emitter['speed'],
+							:angle_add => emitter['angle_add']
+						})
+					end
 					enemy = Enemy.new(Shmup.load_image(window, 'enemy_mini'), emitters, path, enter_on)
 					stage.enemies.push enemy
 				end
