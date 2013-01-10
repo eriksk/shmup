@@ -4,11 +4,11 @@ module Shmup
 	end
 
 	def self.load_sample(window, name)
-		Sample.new(window, "#{CONTENT_ROOT}/audio/#{name}.wav")
+		Gosu::Sample.new(window, "#{CONTENT_ROOT}/audio/#{name}.wav")
 	end
 
 	def self.load_song(window, name)
-		
+		Gosu::Song.new(window, "#{CONTENT_ROOT}/audio/#{name}.wav")
 	end
 
 	def self.wrap_angle(angle)

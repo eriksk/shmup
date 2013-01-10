@@ -13,7 +13,8 @@ module Shmup
 				:repeat => 1,
 				:speed => 0.1,
 				:angle_add => 0.0,
-				:texture => "bullet_blue"
+				:texture => "bullet_blue",
+				:offset => Vec2.new
 			}.merge(opts)
 			@window = window
 			@count = opts[:count]
@@ -26,11 +27,12 @@ module Shmup
 			@speed = opts[:speed]
 			@angle_add = opts[:angle_add].to_radians
 			@texture_name = opts[:texture]
+			@offset = opts[:offset]
 			reset()
 		end
 
 		def reset
-			@current_wait = 0
+			@current_wait = 0.0
 			@current_interval = 0
 			@current_repeat = 0
 			@angle = @angle_default
@@ -55,7 +57,7 @@ module Shmup
 					if @current_interval > @interval
 						@current_interval = 0.0
 						@count.times{ |i|
-							fire(i, bullets, owner.position.x, owner.position.y)
+							fire(i, bullets, owner.position.x + @offset.x, owner.position.y + @offset.y)
 						}
 						@current_repeat += 1
 						@angle += @angle_add

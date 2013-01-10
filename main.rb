@@ -15,6 +15,7 @@ require './lib/ship_path'
 
 require './lib/stage'
 require './lib/stage_loader'
+require './lib/audio_manager'
 
 module Shmup
 	class GameWindow < Gosu::Window

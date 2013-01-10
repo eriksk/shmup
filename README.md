@@ -27,7 +27,7 @@ This is a classic intense Shoot 'Em Up made in Ruby. It is a remake of the first
 * resource pooling
 
 ## Working on
-* audio
+* make enemy positioning resolution independent
 
 ## Done
 * bullets
@@ -36,3 +36,4 @@ This is a classic intense Shoot 'Em Up made in Ruby. It is a remake of the first
 * bullet patterns
 * enemies/stage from json
 * time offset multiplier for "enter on" for multiple enemies in a row
+* audio

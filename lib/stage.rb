@@ -9,13 +9,34 @@ module Shmup
 
 			@player = Ship.new(Shmup.load_image(window, 'ship_player'), PlayerController.new(window), 0.01, [
 					BulletEmitter.new(window, {
-						:count => 5,
-						:interval => 100, 
+						:count => 2,
+						:interval => 50, 
 						:angle => -90,
-						:wait => 200,
-						:repeat => 6,
-						:speed => 0.5,
-						:texture => "bullet_player_1"
+						:wait => 100,
+						:repeat => 3,
+						:speed => 1.0,
+						:texture => "bullet_player_1",
+						:offset => Vec2.new(0, -32)
+					}),
+					BulletEmitter.new(window, {
+						:count => 2,
+						:interval => 50, 
+						:angle => -90,
+						:wait => 100,
+						:repeat => 3,
+						:speed => 1.0,
+						:texture => "bullet_player_1",
+						:offset => Vec2.new(-16, -16)
+					}),
+					BulletEmitter.new(window, {
+						:count => 2,
+						:interval => 50, 
+						:angle => -90,
+						:wait => 100,
+						:repeat => 3,
+						:speed => 1.0,
+						:texture => "bullet_player_1",
+						:offset => Vec2.new(16, -16)
 					})
 				])
 				.set_position(WIDTH / 2.0, HEIGHT - 128)
@@ -56,19 +77,24 @@ module Shmup
 			update_bullets dt
 
 			@player.update dt
-			if @window.button_down?(Gosu::KbLeftControl)
+			if @window.button_down?(Gosu::KbSpace)
 				@player.emitters.each do |emitter|
 					emitter.update @player, @player_bullets, dt
 				end
 			else
 				@player.emitters.each do |emitter|
-					emitter.reset
+					emitter.reset 
 				end
 			end
 			@enemies.each do |e|
 				e.update dt, @time
-				e.emitters.each do |emitter|
-					emitter.update e, @enemy_bullets, dt
+				if e.started? @time
+					e.emitters.each do |emitter|
+						emitter.update e, @enemy_bullets, dt
+					end
+					if !e.alive?
+						@enemies.delete e
+					end
 				end
 			end
 		end

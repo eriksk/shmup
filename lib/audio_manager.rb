@@ -14,18 +14,29 @@ module Shmup
 		end	
 
 		def play_sound(name)
+			@sounds[name].play(volume_sfx)
 		end	
 
 		def play_song(name)
+			@songs[name].play(true)
 		end
 
 		def pause_song(name)
+			if @songs[name].playing?
+				@songs[name].pause()
+			end
 		end
 
 		def resume_song(name)
+			if !@songs[name].playing?
+				@songs[name].play()
+			end
 		end
 
 		def stop_song(name)
+			if @songs[name].playing?
+				@songs[name].stop()
+			end
 		end
 	end
 end

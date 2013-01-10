@@ -13,13 +13,11 @@ module Shmup
 		end
 
 		def alive?
-			if stage_time >= @enter_on 
-				if @path.done?
-					false
-				else
-					true
-				end
-			end
+			!@path.done?
+		end
+
+		def started? stage_time
+			stage_time > @enter_on
 		end
 		
 		def update dt, stage_time
