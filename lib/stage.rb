@@ -10,13 +10,12 @@ module Shmup
 			@player = Ship.new(Shmup.load_image(window, 'ship_player'), PlayerController.new(window), 0.01, [
 					BulletEmitter.new(window, {
 						:count => 5,
-						:interval => 200, 
-						:angle => 0.0,
-						:angle_diff => 0.2,
-						:wait => 1000,
+						:interval => 100, 
+						:angle => -90,
+						:wait => 200,
 						:repeat => 6,
 						:speed => 0.5,
-						:angle_add => 45
+						:texture => "bullet_player_1"
 					})
 				])
 				.set_position(WIDTH / 2.0, HEIGHT - 128)
@@ -57,8 +56,14 @@ module Shmup
 			update_bullets dt
 
 			@player.update dt
-			@player.emitters.each do |emitter|
-				emitter.update @player, @player_bullets, dt
+			if @window.button_down?(Gosu::KbLeftControl)
+				@player.emitters.each do |emitter|
+					emitter.update @player, @player_bullets, dt
+				end
+			else
+				@player.emitters.each do |emitter|
+					emitter.reset
+				end
 			end
 			@enemies.each do |e|
 				e.update dt, @time

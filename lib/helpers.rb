@@ -11,14 +11,6 @@ module Shmup
 		
 	end
 
-	def self.to_degrees radiens
-		radiens * 180 / Math::PI
-	end
-
-	def self.to_radians radiens
-		radiens * 180 / Math::PI
-	end
-
 	def self.wrap_angle(angle)
 		while angle > Airstrike::to_radians(360.0)
 			angle -= Airstrike::to_radians(360.0)
@@ -56,7 +48,11 @@ module Shmup
 end
 
 class Numeric
-	def to_radians
+	def to_degrees
 		self * 180.0 / Math::PI
+	end
+
+	def to_radians
+		self * Math::PI / 180.0
 	end
 end

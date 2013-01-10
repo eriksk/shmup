@@ -1,7 +1,7 @@
 module Shmup
 	class BulletEmitter
 
-		attr_accessor :count, :interval, :angle, :angle_diff, :wait, :repeat, :angle_add
+		attr_accessor :count, :interval, :angle, :angle_diff, :wait, :repeat, :angle_add, :texture_name
 
 		def initialize window, opts = {}
 			opts = {
@@ -12,18 +12,20 @@ module Shmup
 				:wait => 500.0,
 				:repeat => 1,
 				:speed => 0.1,
-				:angle_add => 0.0
+				:angle_add => 0.0,
+				:texture => "bullet_blue"
 			}.merge(opts)
 			@window = window
 			@count = opts[:count]
 			@interval = opts[:interval]
-			@angle = opts[:angle]
+			@angle = opts[:angle].to_radians
 			@angle_default = @angle
-			@angle_diff = opts[:angle_diff]
+			@angle_diff = opts[:angle_diff].to_radians
 			@wait = opts[:wait]
 			@repeat = opts[:repeat]
 			@speed = opts[:speed]
-			@angle_add = opts[:angle_add]
+			@angle_add = opts[:angle_add].to_radians
+			@texture_name = opts[:texture]
 			reset()
 		end
 
@@ -36,10 +38,12 @@ module Shmup
 
 		def fire index, bullets, x, y
 			# TODO: pool bullets, wait until performance is crap
-			bullets << Bullet.new(Shmup.load_image(@window, 'bullet_blue'), 1000)
+			angle = @angle + (@angle_diff * index)
+			bullets << Bullet.new(Shmup.load_image(@window, @texture_name), 1000)
 				.set_position(x, y)
-				.set_velocity(Math::cos(@angle + (@angle_diff * index)) * @speed,
-							  Math::sin(@angle + (@angle_diff * index)) * @speed)
+				.set_velocity(Math::cos(angle) * @speed,
+							  Math::sin(angle) * @speed)
+				.set_rotation(angle)
 		end
 		
 		def update owner, bullets, dt

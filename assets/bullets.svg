@@ -70,6 +70,26 @@
        fx="285.71429"
        fy="493.79074"
        r="18.571428" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3783"
+       id="linearGradient3793"
+       x1="172.35727"
+       y1="464.70593"
+       x2="172.35727"
+       y2="502.71628"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.5000001,0,0,1.038961,-85.989242,-18.853201)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3783"
+       id="linearGradient3800"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.5000001,0,0,1.038961,-85.989242,-18.853201)"
+       x1="172.35727"
+       y1="464.70593"
+       x2="172.35727"
+       y2="502.71628" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -78,9 +98,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="224.25448"
-     inkscape:cy="534.00764"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="178.66415"
+     inkscape:cy="557.21252"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -109,7 +129,10 @@
      id="layer1">
     <g
        id="g3801"
-       transform="matrix(0.43664719,0,0,0.43664719,79.229635,254.042)">
+       transform="matrix(0.43664719,0,0,0.43664719,79.229635,254.042)"
+       inkscape:export-filename="/Users/erikskoglund/Documents/ruby/shmup/content/gfx/bullet_purple.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          sodipodi:type="arc"
          style="fill:#000000;fill-opacity:1;stroke:none"
@@ -143,7 +166,10 @@
     </g>
     <g
        transform="matrix(0.43664719,0,0,0.43664719,116.22647,253.91573)"
-       id="g3827">
+       id="g3827"
+       inkscape:export-filename="/Users/erikskoglund/Documents/ruby/shmup/content/gfx/bullet_green.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          transform="matrix(0.98653844,0,0,0.98653844,-1.3137944,4.0415723)"
          d="m 304.28572,493.79074 c 0,10.25672 -8.31471,18.57143 -18.57143,18.57143 -10.25671,0 -18.57142,-8.31471 -18.57142,-18.57143 0,-10.25672 8.31471,-18.57143 18.57142,-18.57143 10.25672,0 18.57143,8.31471 18.57143,18.57143 z"
@@ -214,7 +240,10 @@
     </g>
     <g
        transform="matrix(0.43664719,0,0,0.43664719,116.35274,293.69049)"
-       id="g3847">
+       id="g3847"
+       inkscape:export-filename="/Users/erikskoglund/Documents/ruby/shmup/content/gfx/bullet_yellow.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          transform="matrix(0.98653844,0,0,0.98653844,-1.3137944,4.0415723)"
          d="m 304.28572,493.79074 c 0,10.25672 -8.31471,18.57143 -18.57143,18.57143 -10.25671,0 -18.57142,-8.31471 -18.57142,-18.57143 0,-10.25672 8.31471,-18.57143 18.57142,-18.57143 10.25672,0 18.57143,8.31471 18.57143,18.57143 z"
@@ -245,6 +274,34 @@
          id="path3853"
          style="fill:url(#radialGradient3855);fill-opacity:1;stroke:none"
          sodipodi:type="arc" />
+    </g>
+    <g
+       id="g3795"
+       inkscape:export-filename="/Users/erikskoglund/Documents/ruby/shmup/content/gfx/bullet_player_1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(0,0.87995515,-0.92884149,0,598.90125,328.29264)">
+      <rect
+         y="463.44324"
+         x="169.70563"
+         height="40.911179"
+         width="4.5456862"
+         id="rect3013"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#0197fd;fill-opacity:1;stroke:none"
+         id="rect3015"
+         width="2.5253811"
+         height="38.890873"
+         x="170.71577"
+         y="464.4534" />
+      <rect
+         y="463.69577"
+         x="170.08443"
+         height="40.406101"
+         width="3.7880719"
+         id="rect3017"
+         style="fill:url(#linearGradient3800);fill-opacity:1;stroke:none" />
     </g>
   </g>
 </svg>
