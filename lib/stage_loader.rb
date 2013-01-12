@@ -28,9 +28,9 @@ module Shmup
 					start_offset = e['start_offset']
 					enter_on = e['enter_on'] + (start_offset ? start_offset * i : 0.0)
 					type = e['type']
-					start = Vec2.new(e['path']['start']['x'], e['path']['start']['y'])
-					stop = Vec2.new(e['path']['stop']['x'], e['path']['stop']['y'])
-					out = Vec2.new(e['path']['out']['x'], e['path']['out']['y'])
+					start = Vec2.new(e['path']['start']['x'] * WIDTH, e['path']['start']['y'] * HEIGHT)
+					stop = Vec2.new(e['path']['stop']['x'] * WIDTH, e['path']['stop']['y'] * HEIGHT)
+					out = Vec2.new(e['path']['out']['x'] * WIDTH, e['path']['out']['y'] * HEIGHT)
 					duration = e['path']['duration']
 					stay = e['path']['stay']
 					path = ShipPath.new(start, stop, out, duration * 1000.0, stay * 1000.0)

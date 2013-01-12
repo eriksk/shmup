@@ -14,7 +14,6 @@ module Shmup
 					"song5",
 					"song7"
 				])
-			@audio_manager.play_song("song1")
 			@stage = StageLoader.load(window, "stage1")
 		end
 

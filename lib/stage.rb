@@ -9,32 +9,32 @@ module Shmup
 
 			@player = Ship.new(Shmup.load_image(window, 'ship_player'), PlayerController.new(window), 0.01, [
 					BulletEmitter.new(window, {
-						:count => 2,
-						:interval => 50, 
+						:count => 3,
+						:interval => 40, 
 						:angle => -90,
-						:wait => 100,
+						:wait => 60,
 						:repeat => 3,
-						:speed => 1.0,
+						:speed => 2.0,
 						:texture => "bullet_player_1",
 						:offset => Vec2.new(0, -32)
 					}),
 					BulletEmitter.new(window, {
-						:count => 2,
-						:interval => 50, 
+						:count => 3,
+						:interval => 40, 
 						:angle => -90,
-						:wait => 100,
+						:wait => 60,
 						:repeat => 3,
-						:speed => 1.0,
+						:speed => 2.0,
 						:texture => "bullet_player_1",
 						:offset => Vec2.new(-16, -16)
 					}),
 					BulletEmitter.new(window, {
 						:count => 2,
-						:interval => 50, 
+						:interval => 40, 
 						:angle => -90,
-						:wait => 100,
+						:wait => 60,
 						:repeat => 3,
-						:speed => 1.0,
+						:speed => 2.0,
 						:texture => "bullet_player_1",
 						:offset => Vec2.new(16, -16)
 					})

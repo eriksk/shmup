@@ -18,7 +18,6 @@ This is a classic intense Shoot 'Em Up made in Ruby. It is a remake of the first
 * title scene
 * scene management
 * player weapons
-* collision bullets/enemies
 * collision bullets/player
 * particles, explosions
 * score
@@ -27,7 +26,7 @@ This is a classic intense Shoot 'Em Up made in Ruby. It is a remake of the first
 * resource pooling
 
 ## Working on
-* make enemy positioning resolution independent
+* collision bullets/enemies
 
 ## Done
 * bullets
@@ -37,3 +36,4 @@ This is a classic intense Shoot 'Em Up made in Ruby. It is a remake of the first
 * enemies/stage from json
 * time offset multiplier for "enter on" for multiple enemies in a row
 * audio
+* make enemy positioning resolution independent
