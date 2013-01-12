@@ -13,6 +13,7 @@ require './lib/ship'
 require './lib/enemy'
 require './lib/ship_path'
 
+require './lib/collision_manager'
 require './lib/stage'
 require './lib/stage_loader'
 require './lib/audio_manager'

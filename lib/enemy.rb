@@ -10,12 +10,21 @@ module Shmup
 			# always start outside the screen
 			@position.x = -1000
 			@position.y = -1000
+			@health = 10
 		end
 
 		def alive?
 			!@path.done?
 		end
 
+		def dead?
+			@health <= 0	
+		end
+
+		def damage damage
+			@health -= damage
+		end
+		
 		def started? stage_time
 			stage_time > @enter_on
 		end

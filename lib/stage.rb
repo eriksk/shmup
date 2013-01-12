@@ -44,6 +44,7 @@ module Shmup
 			@player_bullets = []
 			@enemy_bullets = []
 			@enemies = []
+			@collision_manager = CollisionManager.new(self)
 		end
 
 		def fast_forward_to time_in_milliseconds
@@ -97,6 +98,8 @@ module Shmup
 					end
 				end
 			end
+
+			@collision_manager.update dt, @player, @enemies, @player_bullets, @enemy_bullets
 		end
 
 		def draw
